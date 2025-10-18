@@ -258,7 +258,7 @@ document.getElementById('confirmCheckout').addEventListener('click', function ()
                 <div class="text-center py-5">
                     <i class="bi bi-cart-x" style="font-size: 3rem;"></i>
                     <p class="mt-3">购物车空空如也</p>
-                    <a href="../html/index.html" class="btn btn-jd mt-2" data-login-required>去购物</a>
+                    <a href="/chw/" class="btn btn-jd mt-2" data-login-required>去购物</a>
                 </div>
             `;
             return;
@@ -424,3 +424,4 @@ function element(imgSrc, textContent, textColor) {
   // 如果你需要外部能控制关闭，可以返回 clearTimers
   return clearTimers;
 }
+
