@@ -63,7 +63,8 @@ window.seckill = [
 //======================================商品列表 · 结束区============================================
 console.log('当前路径:', window.location.pathname);
 //根据路径判断是否渲染
-if (window.location.pathname=='/chw/') {
+if (window.location.pathname === '/chw/' || window.location.pathname.includes('index.html')) {
+  console.log("index.js 已加载！");
   //获取本地存储数据
   let user = localStorage.getItem('currentUser');
   /* 顶部菜单栏 */
@@ -782,7 +783,7 @@ if (window.location.pathname=='/chw/') {
       if (cate === products[i].category) {
         hasProducts = true;
         const a = document.createElement('a');
-        a.href = './good.html?id=' + products[i].id;;
+        a.href = './html/good.html?id=' + products[i].id;;
         a.className = 'c-l-items';
         a.textContent = products[i].name;
         listContainer.appendChild(a);
@@ -1059,3 +1060,10 @@ if (window.location.pathname=='/chw/') {
     audio.play();//自动播放
   }
 }
+
+
+
+
+
+
+
