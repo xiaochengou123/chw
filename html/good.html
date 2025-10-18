@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=1200, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <title>晨惠农-商品详情</title>
+    <!--引入网页图标-->
+    <link rel="icon" href="../images/title.ico">
+    <!--引入全局样式-->
+    <link rel="stylesheet" href="../css/reset.css">
+    <!--引入自己的样式-->
+    <link rel="stylesheet" href="../css/good.css">
+    <!-- 引入按钮组件样式 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!--顶部通知栏-->
+    <div class="shortcut">
+        <div class="shortcut-c">
+            <!-- 左边信息-->
+            <div class="shortcut-left">
+                <div class="left-iten f-c">欢迎来到晨惠农网</div>
+                <div class="f-c">
+                    <a href="../html/login.html" class="f-c-left">请登入</a>
+                    <a href="../html/registered.html" class="f-c-rigth">免费注册</a>
+                </div>
+            </div>
+            <!-- 右边信息 -->
+            <div class="shortcut-rigth">
+                <!--购物车-->
+
+                <!--邮箱-->
+                <div class="bar" id="hoverDropdown">
+                    <div class="cascade-bar f-c">用户邮箱名称<img id="imageemnu" src="../images/index/emnu2.png"
+                            style="width: 8px">
+                    </div>
+                    <div class="bar-content">
+                        <a href="javascript:;" class="emnu" data-login-required>退出</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="body">
+        <!-- 弹窗 -->
+        <div class="top color">
+            <img src="../images/massages/success.png" class="img-elment">
+            <p class="txt-elment">我喜欢她，喜欢一辈子...</p>
+        </div>
+        <!-- 搜索栏 左右布局 -->
+        <div class="search">
+            <a href="./index.html" target="" class="logo"><img src="../images/index/Logo.png" alt="晨惠农网"
+                    class="logo-image"></a>
+            <div class="search-box">
+                <input type="text" placeholder="请输入商品名称" class="search-input">
+                <button class="search-btn">搜索</button>
+            </div>
+        </div>
+
+
+        <!-- 左右布局 -->
+        <div style="display: flex;justify-content: space-between;">
+            <!-- 左部分 -->
+            <div class="box">
+                <div id="good-left-image">
+                </div>
+                <div class="mask"></div>
+                <div id="big">
+
+                </div>
+            </div>
+            <!-- 右部分 -->
+            <div class="right">
+                <div id="good-info">
+                </div>
+                <div class="tips">
+                    <div class="tip">
+                        <span>2分钟内发货，3分钟预计送达</span>&nbsp;&nbsp;快递:&nbsp;免运费&nbsp;&nbsp;浙江金华&nbsp;&nbsp;至&nbsp;&nbsp;
+                        国内
+                    </div>
+                    <div class="tip">7天价保&nbsp;&nbsp;&nbsp;7天无理由退货</div>
+                </div>
+                <div class="design">
+                    <div id="good-design">
+                        <div class="good-design-title">商品款式</div>
+                    </div>
+                    <div class="foot--ppktLnNd">
+                        <div class="num">
+                            <span>数量</span>
+                            <div class="num-box">
+                                <div class="num-minus">-</div>
+                                <div class="num-num">1</div>
+                                <div class="num-plus">+</div>
+                            </div>
+                            <span>有货</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="button">
+                    <button class="add" data-login-required>加入购物车</button>
+                    <button class="buy" data-login-required>立即购买</button>
+                    <a href="../html/orders.html" title="我的订单" class="cart-a1" data-login-required>
+                        <img src="../images/elevator/我的订单.png" alt="我的订单" class="cart-img1">
+                        <span class="cart-txt1">订单</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!--楼顶效果-->
+        <div class="elevator">
+            <ul class="elevator_list">
+                <li class="elevator_item"><!-- elevator_active -->
+                    <i class="cart-count cart_count_zero" id="homeCartCount">0</i>
+                    <a href="../html/cart.html" title="购物车" class="cart-a" data-login-required>
+                        <img src="../images/elevator/购物车.png" alt="购物车" class="cart-img">
+                        <span class="cart-txt">购物车</span>
+                    </a>
+                </li>
+
+            </ul>
+            <a href="javascript:;" class="elevator_totop" title="回顶部" tabindex="-1" id="elevator_totop">
+                <img src="../images/elevator/返回顶部.png" alt="回顶部" class="elevator_img">
+                <span class="elevator_totop_txt">回顶部</span>
+            </a>
+        </div>
+        <!-- 用户评价 -->
+
+        <div class="user-evaluation">
+            <div class="title">用户评价</div>
+
+            <div style="position: relative;">
+                <input type="file" class="image-upload" accept="image/*,video/*" multiple style="display: none;">
+                <button class="add-image-btn" id="add-image-btn">+</button>
+                <div class="image-preview" id="image-preview"></div>
+                <textarea placeholder="请输入评价" class="evaluation" rows="5" cols="50"></textarea>
+                <div class="eva-but">发送</div>
+            </div>
+            <!--  订单评价----当前没有任何评价信息哦~ -->
+            <ul class="list">
+
+            </ul>
+        </div>
+    </div>
+    <!-- 放大图片弹框 -->
+    <div class="modal" id="imageModal">
+        <div class="modal-content">
+            <img src="" class="modal-img" id="modalImage" alt="放大图片">
+            <button class="close-btn" id="closeModal">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="img-info" id="imageInfo"></div>
+        </div>
+
+        <div class="navigation">
+            <button class="nav-btn" id="prevBtn">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="nav-btn" id="nextBtn">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+    </div>
+    <!-- 先加载，商品和京东秒杀的数据 -->
+    <script src="../js/index.js"></script>
+    <!-- 在加载，本页面的逻辑功能,嘻嘻-->
+    <script src="../js/good.js"></script>
+</body>
+
+</html>

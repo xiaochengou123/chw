@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>晨惠农-购物车</title>
+    <!--引入网页图标-->
+    <link rel="icon" href="../images/title.ico">
+    <!--引入bootstrap样式-->
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet" > 
+    <!--引入自己的样式-->
+    <link rel="stylesheet" href="../css/cart.css">
+</head>
+
+<body>
+    <!--顶部通知栏-->
+    <div class="shortcut">
+        <div class="shortcut-c">
+            <!-- 左边信息-->
+            <div class="shortcut-left">
+                <div class="left-iten f-c">欢迎来到晨惠农网</div>
+                <div class="f-c">
+                    <a href="../html/login.html" class="f-c-left">请登入</a>
+                    <a href="../html/registered.html" class="f-c-rigth">免费注册</a>
+                </div>
+            </div>
+            <!-- 右边信息 -->
+            <div class="shortcut-rigth">
+                <!--购物车-->
+
+                <!--买家中心-->
+                <div class="bar" id="hoverDropdown">
+                    <div class="cascade-bar f-c">用户邮箱名称<img id="imageemnu" src="../images/index/emnu2.png"
+                            style="width: 8px"></div>
+                    <div class="bar-content">
+                        <a href="javascript:;" class="emnu" data-login-required>退出</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 顶部导航 -->
+        <div class="header py-3 mb-4">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <i>我 的 购 物 车 </i><a href="./index.html"><img src="../images/index/Logo.png" alt="logo"
+                                style="width: 100px;"> </a>
+                    </div>
+
+                    <div class="col-md-6 text-end">
+                        <a href="./index.html" class="text-decoration-none text-dark" data-login-required><i
+                                class="bi bi-house"></i> 继续购物&nbsp;</a>
+                        <a href="./orders.html" class="text-decoration-none text-dark" data-login-required>
+                            <i class="bi bi-journal-text" style="color: #999;"></i>
+                            我的订单
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- 弹窗 -->
+            <div class="top color">
+                <img src="../images/massages/success.png" class="img-elment">
+                <p class="txt-elment">我喜欢她，喜欢一辈子...</p>
+            </div>
+        </div>
+        <div class="container mb-5">
+            <!-- 购物车标题 -->
+            <div class="row mb-3">
+                <div class="col">
+                    <div class="d-flex justify-content-between align-items-center p-3 cart-container">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="selectAll">
+                            <label class="form-check-label" for="selectAll">全选</label>
+                        </div>
+                        <div class="d-flex">
+                            <button class="btn btn-sm btn-outline-danger me-2" id="batchDelete"
+                                data-login-required>批量删除</button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 购物车商品列表 -->
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="cart-container p-3">
+                        <div id="cartItems">
+                            <!-- 购物车商品将通过JS动态生成 -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 购物车汇总 -->
+                <div class="col-md-4">
+                    <div class="cart-container p-3 sticky-top" style="top: 80px;">
+                        <h5 class="border-bottom pb-2">订单摘要</h5>
+                        <div class="d-flex justify-content-between my-2">
+                            <span>商品总数</span>
+                            <span id="totalQuantity">0</span>
+                        </div>
+                        <div class="d-flex justify-content-between my-2">
+                            <span>商品总价</span>
+                            <span id="totalPrice">¥0.00</span>
+                        </div>
+                        <div class="d-flex justify-content-between my-2">
+                            <span>运费</span>
+                            <span class="text-success">免费</span>
+                        </div>
+                        <div class="d-flex justify-content-between my-2 fw-bold">
+                            <span>应付总额</span>
+                            <span id="payableAmount" class="text-danger">¥0.00</span>
+                        </div>
+                        <button class="btn btn-jd w-100 mt-3 py-2 fw-bold" data-bs-toggle="modal"
+                            data-bs-target="#checkoutModal" data-login-required  id="openCheckout">去结算</button>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+           <!-- 结算弹窗 -->
+        <div class="modal fade" id="checkoutModal" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">确认订单</h5>
+                        <span class="close" id="closeModal">&times;</span>
+                    </div>
+                    <div class="modal-body">
+                        <p>共 <span id="modalTotalQuantity">0</span> 件商品，总金额: <span id="modalTotalPrice">¥0.00</span></p>
+                        <div class="mb-3">
+                            <label for="addressInput">收货地址：</label>
+                            <input type="text" class="form-control" list="addressList" placeholder="请输入或选择地址" id="addressInput">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">支付方式</label>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="payment" id="wechatPay" checked
+                                    value="微信支付">
+                                <label class="form-check-label" for="wechatPay">
+                                    <img src="../images/ConfirmOrder/微信.png" alt="我爱微信的钱.../微信支付图片" class="wx">
+                                    微信支付
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="payment" id="alipay" value="支付宝">
+                                <label class="form-check-label" for="alipay">
+                                    <img src="../images/ConfirmOrder/支付宝.png" alt="我爱支付宝的钱.../支付宝图片" class="zfb">
+                                    支付宝
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" id="cancelCheckout">取消</button>
+                        <button type="button" class="btn btn-jd" id="confirmCheckout">确认支付</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--引入js的样式-->
+        <script src="../js/cart.js"></script>
+</body>
+
+</html>

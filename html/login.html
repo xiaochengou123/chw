@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>晨惠农-欢迎登入</title>
+  <!-- 导入登入样式 -->
+  <link rel="stylesheet" href="../css/login.css">
+  <!-- 导入图标 -->
+  <link rel="icon" href="../images/title.ico">
+  <!-- 导入全局样式 -->
+  <link rel="stylesheet" href="../css/reset.css">
+</head>
+
+<body>
+  <!-- 顶部区域 -->
+  <div class="wrap">
+    <div id="logo">
+      <a href="./index.html">
+        <img src="../images/login/Logo.png" alt="晨惠农" width="170">
+      </a>
+    </div>
+    <a href="./index.html" class="q-link"><img src="../images/login/navsy.png" width="16px"
+        style="margin-top: -2px;margin-right: 2px;">晨惠农 - 首页</a>
+    <!-- 弹窗 -->
+    <div class="top color">
+      <img src="../images/massages/success.png" class="img-elment">
+      <p class="txt-elment">我喜欢她，喜欢一辈子...</p>
+    </div>
+  </div>
+
+  <!--主内容区域-->
+  <div id="content">
+    <div id="content-dp">
+
+    </div>
+    <div class="login-w">
+      <!-- 表格卡片区域 -->
+      <div class="wrap">
+        <div class="from-border">
+          <div class="new-wrap">
+            <div class="form-bottom">
+              <div class="login-form login-form-l" style="opacity: 1;">
+                <div class="qrcode-login">
+                  <div class="mc">
+                    <div class="qrcode-text">晨惠农村庄风景图</div>
+                    <!-- 轮播图 -->
+                    <div class="qrcode-warp">
+                      <img src="../images/login/banner1.jpg" alt="" width="400" height="241" class="img1">
+                    </div>
+                    <ul class="banner-btn">
+                      <li class="banner-active"></li>
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="login-form login-form-r">
+                <div class="login-form-wrap">
+                  <div class="login-form-body">
+                    <div class="box">
+                      <!-- 登入文字 -->
+                      <div class="login_text">
+                        密码登入
+                      </div>
+                      <!-- 用户名、密码框 -->
+                      <div class="mc">
+                        <div class="login">
+                          <form>
+                            <!-- 登录表单 -->
+                            <div class="form-group">
+                              <input type="text" placeholder="邮箱" class="uname" name="name">
+                              <img src="../images/login/clear1.png" alt="一键清除" class="clears">
+                            </div>
+                            <div class="form-group">
+                              <input type="password" placeholder="密码" name="mima" autocomplete="off" class="upawd">
+                            </div>
+                            <div class="login-btn login-submit-btn">
+                              <a href="javascript:void(0);" class="loginLink">登入</a>
+                            </div>
+                          </form>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+                  <!-- 注册 -->
+                  <div class="coagent">
+                    <a href="./registered.html">
+                      <img src="../images/login/立即注册1.png" alt="立即注册" style="margin-bottom: 4px;">立即注册
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 登入居中区域 -->
+      <div class="login-banner">
+        <div class="warp ad-wrap">
+          <div id="banner-bg" class="i-inner">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 教育 -->
+    <div class="teaching">
+      Teaching&nbsp;©&nbsp;<span id="year">2025-永远</span>
+      &nbsp;&nbsp;晨惠农CHN.edu&nbsp;教育所有
+    </div>
+  </div>
+  <!-- 验证码区域 -->
+  <div class="captcha_drop">
+
+  </div>
+  <div class="captcha_modal_pc">
+    <div class="warp">
+      <!-- 头 -->
+      <div class="captcha_header">
+        <div class="modal_title">安全验证</div>
+        <span class="opt">
+          <span class="jcap_refresh">
+            <img src="../images/login/刷新.png" alt="刷新" class="optBtmImg">
+            <span class="optBtnText">刷新</span>
+          </span>
+        </span>
+      </div>
+      <!-- 主体 -->
+      <div class="captcha_body">
+        <!-- error -->
+        <div class="img_loading" style="display: none;">
+          <div class="img_tips_wraper"><img src="../images/login/error.png" class="img_tips">
+            <p class="tip_text">
+              验证失败，请重新验证
+            </p>
+          </div>
+        </div>
+        <!-- result -->
+        <div class="img_loading_refreshTips" style="display: none;">
+          <img src="../images/login/正确.png" class="p">
+          <p>加载中</p>
+        </div>
+        <!-- <img src="../images/login/capt/1_b.jpg" id="main_img" style>
+          <img src="../images/login/capt/1.png" id="slot_img" style> -->
+      </div>
+      <!-- 脚 -->
+      <div class="captcha_footer">
+        <div class="local_footer">
+          <div class="slideTip">
+            请拖动滑块将图像还原
+          </div>
+          <div class="checkingTip">
+            滑动验证中
+          </div>
+          <div class="slide_path"></div>
+          <img src="../images/login/滑动.png" alt="" class="move-img">
+        </div>
+      </div>
+      <!---->
+    </div>
+  </div>
+
+  <!--导入登入的js-->
+  <script src="../js/login.js"></script>
+</body>
+
+</html>

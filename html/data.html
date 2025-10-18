@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>晨惠农-热销大数据</title>
+   <!--引入网页图标-->
+   <link rel="icon" href="../images/title.ico">
+   <!--引入自己的样式-->
+   <link rel="stylesheet" href="../css/data.css">
+   <!-- 引入 echarts.js -->
+   <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
+</head>
+
+<body>
+
+   <div id="data">
+
+      <!-- 头部部分 -->
+      <div class="data-header " style="height: 64px">
+         <div class="nav-header">
+            <div class="nav-left">
+               <div class="logo">
+                  <a href="../html/index.html">
+                     <img src="../images/index/Logo.png" alt>
+                  </a>
+                  <ul class="c-nav-menu">
+
+                     <li class="menu">数据超市</li>
+                  </ul>
+               </div>
+            </div>
+            <div class="nav-rigth">
+               <div class="c-opening">
+                  <img src="../images/data/我的订单.png" class="img">
+                  <a href="./orders.html"><span>我的订单</span></a>
+               </div>
+               <div class="c-perfile">
+
+                  <div class="c-perfile-text">
+                     <img src="../images/data/头像.png" alt="头像">
+                     <a href="javascript:;" class="a1">
+                        <span class="t2">点击登入</span>
+
+                     </a>
+                     <div class="bar-content">
+                        <a href="javascript:;">退出</a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!-- 弹窗 -->
+         <div class="top color">
+            <img src="../images/massages/success.png" class="img-elment">
+            <p class="txt-elment">我喜欢她，喜欢一辈子...</p>
+         </div>
+      </div>
+   </div>
+   <!-- 主体部分 -->
+   <div class="el-main">
+      <div class="main-content-warp" style="padding-top: 0px;">
+         <!-- 左侧栏 -->
+         <div style="width: 200px;"></div>
+         <!-- width=64px -->
+         <div class="el-aside flexdd" style="width: 200px;">
+            <div class="m-sub-menu">
+               <span class="sub-title-normal t1">数据超市</span> <img src="../images/data/left.png" class="sub-icon">
+            </div>
+            <ul class="el-menu">
+               <li class="el-menu-item is-active" style="padding-left: 20px; ">
+                  <img src="../images/data/hot-active.png " class="icon"> <span class="t1"
+                     style="color: rgb(15, 153, 20)">热销</span>
+               </li>
+               <li class="el-menu-item" style="padding-left: 20px; ">
+                  <img src="../images/data/user.png" class="icon"> <span class="t1">用户</span>
+               </li>
+            </ul>
+         </div>
+         <!-- 中间区域 -->
+         <div class="main-content-body">
+            <div class="main-content water-container">
+               <div class="production">
+                  <!-- 上区域 -->
+                  <div class="search—icon">
+                     <div class="search">
+                        <div class="foot-hot">热销商品类别排行</div>
+                     </div>
+                     <div class="chart_box">
+                        <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+                        <div id="chart_box_main" style="width: 1142px;height:500px;"></div>
+                     </div>
+                  </div>
+                  <!-- 下区域 -->
+                  <div class="bazaar-table">
+                     <div class="table">
+                        <div class="table-title">
+                           详细数据
+                        </div>
+                     </div>
+                     <!--中间-->
+                     <div class="el-table-small el-table-fit el-table" style="width: 100%;">
+                        <!-- 表格 -->
+                        <table class="sample-table">
+                           <thead class="has-gutter">
+                              <tr>
+                                 <!-- <th>ID</th>
+                                    <th>名称</th>
+                                    <th>价格</th>
+                                    <th>数量</th>
+                                    <th>状态</th> -->
+                              </tr>
+                           </thead>
+                           <tbody class="has-gutte">
+                              <!-- <tr>
+                                    <td>1001</td>
+                                    <td>项目Alpha</td>
+                                    <td>2023-05-12</td>
+                                    <td>2023-05-12</td>
+                                    <td>已完成</td>
+                                 </tr>
+                                 <tr>
+                                    <td>1002</td>
+                                    <td>项目Beta</td>
+                                    <td>2023-06-18</td>
+                                    <td>2023-06-18</td>
+                                    <td>进行中</td>
+                                 </tr>
+                                 <tr>
+                                    <td>1003</td>
+                                    <td>项目Gamma</td>
+                                    <td>2023-07-22</td>
+                                    <td>2023-07-22</td>
+                                    <td>待开始</td>
+                                 </tr> -->
+                           </tbody>
+                        </table>
+                     </div>
+                     <!--下区-->
+                     <div class="table-foot">
+                        <div class="foot-left">数据来源：用户消费-node</div>
+                        <div class="pagination-container">
+                           <ul class="pagination" id="pagination">
+                              <!-- 分页按钮将通过JavaScript动态生成 -->
+                              <!-- <li><a href="javaScript:;" class="btn-active" id="prev-page"><</a></li>
+                                   <li><a href="javaScript:;" class="active" data-page="1">1</a></li>
+                                   <li><a href="javaScript:;" class="" data-page="2">2</a></li>
+                                   <li><a href="javaScript:;" class="" data-page="3">3</a></li>
+                                   <li><a href="javaScript:;" class="" data-page="4">4</a></li>
+                                   <li><span class="ellipsis">...</span></li>
+                                   <li><a href="javaScript:;" class="" data-page="6">6</a></li>
+                                  <li><a href="javaScript:;" class="" id="next-page">></a><a href="javaScript:;" class="" id="next-page">></a></li> -->
+                           </ul>
+                           <span class="el-title">
+                              前往&nbsp;&nbsp;<input type="text" class="input">&nbsp;&nbsp;页
+                           </span>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   </div>
+
+   <!--引入自己的js-->
+   <script src="../js/data.js"></script>
+</body>
+
+</html>
