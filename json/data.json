@@ -1,0 +1,86 @@
+[
+  {
+    "id": 1,
+    "name": "山东红富士苹果 5斤装",
+    "price": 29.9,
+    "quantity": 120,
+    "category": "freshfruits"
+  },
+  {
+    "id": 2,
+    "name": "海南金煌芒果 3斤装",
+    "price": 39.9,
+    "quantity": 200,
+    "category": "freshfruits"
+  },
+  {
+    "id": 3,
+    "name": "内蒙古草原羊肉 2斤装",
+    "price": 128.0,
+    "quantity": 150,
+    "category": "meats"
+  },
+  {
+    "id": 4,
+    "name": "农家散养土鸡蛋 30枚",
+    "price": 45.9,
+    "quantity": 80,
+    "category": "meats"
+  },
+  {
+    "id": 5,
+    "name": "东北五常大米 10kg",
+    "price": 99.9,
+    "quantity": 70,
+    "category": "Grains"
+  },
+  {
+    "id": 6,
+    "name": "鲁花花生油 5L",
+    "price": 139.9,
+    "quantity": 110,
+    "category": "Grains"
+  },
+  {
+    "id": 7,
+    "name": "阳澄湖大闸蟹 4只装",
+    "price": 198.0,
+    "quantity": 130,
+    "category": "seafoods"
+  },
+  {
+    "id": 8,
+    "name": "舟山带鱼 1kg",
+    "price": 68.8,
+    "quantity": 120,
+    "category": "seafoods"
+  },
+  {
+    "id": 9,
+    "name": "新疆特级红枣 500g",
+    "price": 35.9,
+    "quantity": 200,
+    "category": "drys"
+  },
+  {
+    "id": 10,
+    "name": "福建古田银耳 150g",
+    "price": 42.8,
+    "quantity": 150,
+    "category": "drys"
+  },
+  {
+    "id": 11,
+    "name": "自然律动·果蔬卫士",
+    "price": 59.9,
+    "quantity": 80,
+    "category": "natures"
+  },
+  {
+    "id": 12,
+    "name": "自然律动·虫害克星",
+    "price": 78.5,
+    "quantity": 70,
+    "category": "natures"
+  }
+]

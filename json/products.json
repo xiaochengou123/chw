@@ -1,0 +1,86 @@
+[
+  {
+    "id": 1,
+    "name": "山东红富士苹果 5斤装",
+    "price": 29.9,
+    "category": "freshfruits",
+    "image": "../images/product/山东红富士苹果.jpg"
+  },
+  {
+    "id": 2,
+    "name": "海南金煌芒果 3斤装",
+    "price": 39.9,
+    "category": "freshfruits",
+    "image": "../images/product/海南金煌芒果.jpg"
+  },
+  {
+    "id": 3,
+    "name": "内蒙古草原羊肉 2斤装",
+    "price": 128.0,
+    "category": "meats",
+    "image": "../images/product/内蒙古草原羊肉.jpg"
+  },
+  {
+    "id": 4,
+    "name": "农家散养土鸡蛋 30枚",
+    "price": 45.9,
+    "category": "meats",
+    "image": "../images/product/农家散养土鸡蛋 .png"
+  },
+  {
+    "id": 5,
+    "name": "东北五常大米 10kg",
+    "price": 99.9,
+    "category": "Grains",
+    "image": "../images/product/东北五常大米 10kg.jpg"
+  },
+  {
+    "id": 6,
+    "name": "鲁花花生油 5L",
+    "price": 139.9,
+    "category": "Grains",
+    "image": "../images/product/鲁花花生油.jpg"
+  },
+  {
+    "id": 7,
+    "name": "阳澄湖大闸蟹 4只装",
+    "price": 198.0,
+    "category": "seafoods",
+    "image": "../images/product/阳澄湖大闸蟹 4只装.png"
+  },
+  {
+    "id": 8,
+    "name": "舟山带鱼 1kg",
+    "price": 68.8,
+    "category": "seafoods",
+    "image": "../images/product/舟山带鱼 1kg.jpg"
+  },
+  {
+    "id": 9,
+    "name": "新疆特级红枣 500g",
+    "price": 35.9,
+    "category": "drys",
+    "image": "../images/product/新疆特级红枣 500g.png"
+  },
+  {
+    "id": 10,
+    "name": "福建古田银耳 150g",
+    "price": 42.8,
+    "category": "drys",
+    "image": "../images/product/福建古田银耳.jpg"
+  },
+  {
+    "id": 11,
+    "name": "自然律动·果蔬卫士",
+    "price": 59.9,
+    "category": "natures",
+    "image": "../images/product/自然律动·果蔬卫士.jpg"
+  },
+  {
+    "id": 12,
+    "name": "自然律动·虫害克星",
+    "price": 78.5,
+    "category": "natures",
+    "image": "../images/product/自然律动·虫害克星.jpg"
+  }
+]
