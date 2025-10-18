@@ -1,3 +1,4 @@
+console.log("index.js 已加载！");
 //======================================商品列表 · 开始区============================================
 //将products提升到全局变量
 window.products = [
@@ -1058,3 +1059,4 @@ if (window.location.pathname.includes('/html/index.html')) {
     audio.play();//自动播放
   }
 }
+
