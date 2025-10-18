@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>晨惠农</title>
+  <!--引入网页图标-->
+  <link rel="icon" href="../images/title.ico">
+  <!--引入全局样式-->
+  <link rel="stylesheet" href="../css/reset.css">
+  <!--引入自己的样式-->
+  <link rel="stylesheet" href="../css/index.css">
+</head>
+<!-- 预加载 -->
+<body onload="createData()">
+  <!--第一部分顶部区域-->
+  <div class="main">
+    <!--顶部通知栏-->
+    <div class="shortcut">
+      <div class="shortcut-c">
+        <!-- 左边信息-->
+        <div class="shortcut-left">
+          <div class="left-iten f-c">欢迎来到晨惠农网</div>
+          <div class="f-c">
+            <a href="../html/login.html" class="f-c-left">请登入</a>
+            <a href="../html/registered.html" class="f-c-rigth">免费注册</a>
+          </div>
+        </div>
+        <!-- 右边信息 -->
+        <div class="shortcut-rigth">
+          <!--购物车-->
+
+          <!--买家中心-->
+          <div class="bar" id="hoverDropdown">
+            <div class="cascade-bar f-c">用户邮箱名称<img src="../images/index/emnu2.png" class="imageemnu"
+                style="width: 8px"></div>
+            <div class="bar-content">
+              <a href="javascript:;" class="emnu" data-login-required>退出</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--顶部搜索区域-->
+    <div class="shortcut-header" id="shortcutHeader">
+      <!-- 内容居中区域 -->
+      <div class="shortcut-header-c">
+        <!--logo区域-->
+        <a href="./login.html" target="" class="logo"><img src="../images/index/Logo.png" alt="晨惠农网"
+            class="logo-image"></a>
+        <!--搜索+楼层区域-->
+        <div class="search-bg">
+          <!--搜索区域-->
+          <div class="s-ctn">
+            <div class="s-bg">
+              <div class="form">
+                <!--输入框-->
+                <div class="s-t">
+                  <!--输入框-->
+                  <input type="text" id="" placeholder="请输入您要的货品" class="search-ctn">
+                </div>
+                <!-- 模糊查询列表数据 -->
+                <div class="result-list">
+                </div>
+                <!--搜索按钮-->
+                <div class="s-r" data-v-0864a9c4="">搜索</div>
+              </div>
+
+            </div>
+          </div>
+          <!-- 标签区域 -->
+          <div class="hot-cate-list f-c" style="display: none;">
+            <a href="#" class="cate-items" style="color: #39bf3e;">西瓜</a>
+            <a href="#" class="cate-items">驱避剂</a>
+            <a href="#" class="cate-items">荔枝</a>
+            <a href="#" class="cate-items">苹果</a>
+            <a href="#" class="cate-items">榴莲</a>
+            <a href="#" class="cate-items">助剂</a>
+            <a href="#" class="cate-items">鸡</a>
+            <a href="#" class="cate-items">葡萄</a>
+          </div>
+
+
+        </div>
+
+        <!-- 二维码 -->
+        <div class="QR-bg">
+          <div class="app-qr">
+            <img src="../images/index/QR.png" alt="">
+
+          </div>
+          <div class="t1">扫描二维码</div>
+          <div class="t1">手机询价，沟通更方便</div>
+        </div>
+      </div>
+      <!--楼顶效果-->
+      <div class="elevator">
+        <ul class="elevator_list">
+          <li class="elevator_item"><!-- elevator_active -->
+            <i class="cart-count cart_count_zero" id="homeCartCount">0</i>
+            <a href="../html/cart.html" title="购物车" class="cart-a" data-login-required>
+              <img src="../images/elevator/购物车.png" alt="购物车" class="cart-img">
+              <span class="cart-txt">购物车</span>
+            </a>
+          </li>
+        </ul>
+        <a href="javascript:;" class="elevator_totop" title="回顶部" tabindex="-1" id="elevator_totop">
+          <img src="../images/elevator/返回顶部.png" alt="回顶部" class="elevator_img">
+          <span class="elevator_totop_txt">回顶部</span>
+        </a>
+      </div>
+
+    </div>
+       <!-- 弹窗 -->
+          <div class="top color" >
+             <img src="../images/massages/success.png" class="img-elment">
+              <p class="txt-elment">我喜欢她，喜欢一辈子...</p>
+          </div>
+  </div>
+  <!-- ----------------------------------------------- -->
+  <!--第二部分banner区域-->
+  <div class="ctn-bg">
+    <!--中间区域-> 选项卡+轮播图+详细信息卡，卡片居中区域-->
+    <div class="fs">
+      <!--主体内容区域-->
+
+      <div class="ctn-container ctn-box">
+        <!--导航栏-->
+        <!-- <div class="ctn-dh" style="z-index: auto;">
+
+          </div> -->
+        <!--选项卡-->
+        <div class="ctn-bg-l">
+          <!-- 上面类别文字 -->
+          <div class="category-title">
+            商品类别
+          </div>
+          <!--下面选项卡-->
+          <div class="category-bg">
+            <!-- 选项卡弹窗 -->
+            <div class="r-cate-bg">
+
+
+            </div>
+
+          </div>
+
+</div>
+
+
+        <!--轮播图-->
+        <div class="ctn-bg-carousel">
+
+          <!-- 导航文字 -->
+          <div class="navigation" style="display: flex; overflow-x: hidden;">
+            <div class="navigation-text1">
+              <a href="index.html" class="navitems-lk">
+                <img src="../images/index/navsy.png" alt="首页" class="imgto">
+                首页</a>
+            </div>
+
+            <div class="navigation-text1">
+              <a href="#" class="navitems-lk">
+                <img src="../images/index/navgy.png" alt="供应大厅" class="imgto">
+                供应大厅</a>
+            </div>
+
+            <div class="navigation-text1">
+              <a href="./data.html" class="navitems-lk">
+                <img src="../images/index/navrx.png" alt="惠农大数据" class="imgto">
+                <img src="../images/index/new-icon.png" alt="" class="items-img1">
+                热销大数据</a>
+            </div>
+
+            <div class="navigation-text1">
+              <a href="#" class="navitems-lk">
+                <img src="../images/index/navxy.png" alt="行业资讯" class="imgto">
+                <img src="../images/index/wom-icon.png" alt="" class="items-img2">
+                行业资讯</a>
+            </div>
+            <div class="navigation-text1">
+              <a href="#" class="navitems-lk">
+                <img src="../images/index/navnj.png" alt="农机学堂" class="imgto">
+                农机学堂</a>
+            </div>
+          </div>
+          <!-- 轮播图区域 -->
+          <div class="home-banner">
+          <div class="slides-container">
+            <div class="slide-item">
+                <a href="javaScript:;">
+                    <img src="https://images.unsplash.com/photo-1501854140801-50d01698950b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&h=345&q=80" alt="自然风景1" class="slide">
+                </a>
+            </div>
+            <div class="slide-item">
+                <a href="javaScript:;">
+                    <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&h=345&q=80" alt="自然风景2" class="slide">
+                </a>
+            </div>
+            <div class="slide-item">
+                <a href="javaScript:;">
+                    <img src="https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&h=345&q=80" alt="自然风景3" class="slide">
+                </a>
+            </div>
+            <!-- 第1张图片的副本，用于实现3到1的平滑过渡 -->
+            <div class="slide-item">
+                <a href="javaScript:;">
+                    <img src="https://images.unsplash.com/photo-1501854140801-50d01698950b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&h=345&q=80" alt="自然风景1" class="slide">
+                </a>
+            </div>
+        </div>
+            <ul class="banner-btn">
+              <li class="banner-active"></li>
+              <li></li>
+              <li></li>
+            </ul>
+            <!-- 左按钮 -->
+            <div class="banner-pre"></div>
+            <!-- 右按钮 -->
+            <div class="banner-next"></div>
+          </div>
+          <!-- 下方图片超链接 -->
+          <div class="btm-banner-com">
+            <a href="#" class="banner-item" data-login-required>
+              <img src="../images/index/banner-com1.jpg" alt="果园热销" class="banner-com1">
+            </a>
+            <a href="#" class="banner-item" data-login-required>
+              <img src="../images/index/banner-com2.jpg" alt="行业资讯" class="banner-com2">
+            </a>
+          </div>
+        </div>
+        <!--右边信息卡区域-->
+        <div class="ctn-bg-r">
+          <div class="ctn-t1">
+            <div class="hn-logo">
+              <input type="file" id="avatarUpload" accept="image/*" style="display: none;" data-login-required>
+              <img src="../images/index/avatar-default.png" alt="晨惠农网" class="avatar" id="avatarImg"
+                id="changeAvatarBtn" data-login-required>
+            </div>
+            <span class="hn-text">hi，欢迎来到晨辉农网</span>
+          </div>
+          <!-- 登入 -->
+          <div class="t1-btm login-btn"><a href="./login.html">快捷登录/注册</a></div>
+          <!-- 信息 -->
+          <div class="buyer-services">
+            <!-- 购物车 -->
+            <!-- <div class="service-item" data-login-required>
+              <div class="icon-wrapper">
+                <a href="#"><img src="../images/购物车.png" style="width: 30px;"></a>
+              </div>
+              <p>购物车</p>
+
+            </div> -->
+            <!-- 秒杀 -->
+            <div class="service-item" data-login-required style="display: none;">
+              <a href="#"> 
+              <div class="icon-wrapper">
+                <img src="../images/index/秒杀.png" style="width: 30px;">
+              </div>
+              </a>
+              <p>秒杀</p>
+            </div>
+            <!-- 建议 -->
+            <div class="service-item" data-login-required>
+              <a href="../html/cart.html">
+              <div class="icon-wrapper">
+                 <img src="../images/index/购物车.png" style="width: 30px;">
+              </div>
+              </a>
+              <p>购物车</p>
+
+            </div>
+            <!-- 我的订单 -->
+            <div class="service-item" data-login-required>
+              <a href="../html/orders.html">
+              <div class="icon-wrapper">
+                 <img src="../images/index/我的订单.png" style="width: 30px;">
+              </div>
+              </a>
+              <p>我的订单</p>
+
+            </div>
+          </div>
+          <!-- 上架商城 -->
+          <div class="t1-btm open-shop-btn" data-login-required style="display:none">扶农上架商品</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <!--第三部分新品秒杀区域-->
+  <div class="Seckill">
+
+    <!-- 新品秒杀时间区域 -->
+    <div class="header" >
+      <!-- <div class="timenext">18:00即将开抢</div> -->
+      <div class="title">
+        新品秒杀
+      </div>
+      <div class="timeCurrent">
+        <span class="timetitle"></span>点场
+      </div>
+      <div class="lines"></div>
+      <div class="tip">
+        <span class="timetitle"></span>场倒计时
+      </div>
+      <div class="time">
+        <!-- 小时 -->
+        <span class="hours"></span>
+        <!--点-->
+        <span class="timeTxt red"> : </span>
+        <!-- 分钟 -->
+        <span class="minutes"></span>
+        <!--点-->
+        <span class="timeTxt red"> : </span>
+        <!-- 秒 -->
+        <span class="seconds"></span>
+      </div>
+    </div>
+    <!-- 商品列表区域 -->
+    <div class="seckillList">
+      <div class="seckilwarp">
+
+        <!-- <div class="item" data-id="13">
+         
+          <div data-login-required>
+            <div class="picTxt">
+              <div class="pictrue">
+                <img src="../images/seckill/橘子.jpg">
+              </div>
+              <div class="name line1">
+                广西蜜桔 净重3斤 单果55mm+ 中秋水果 源头直发包邮
+              </div>
+              <div class="money">
+                <span class="font-color">
+                  ¥999
+                </span>
+                <span class="y_money">
+                  ¥61000
+                </span>
+              </div>
+            </div>
+          </div>
+        </div> -->
+        <!-- <div class="item" style="background: mediumspringgreen;"></div> -->
+      </div>
+      <!-- 左按钮 -->
+      <div class="pre"></div>
+      <!-- 右按钮 -->
+      <div class="next"></div>
+    </div>
+  </div>
+  <!-- 第四部分主体区域 (商品上架) -->
+  <div class="home">
+    <!-- start -->
+    <div class="tab-container">
+      <!-- tab标签 -->
+      <div class="tab-header">
+        <div class="tab-items">
+          <div class="tab-item active" data-category="all">
+            <img src="../images/index/猜你喜欢.png" class="tabIcon">
+            <div class="item-title title-active">猜你喜欢</div>
+          </div>
+          <div class="tab-item" data-category="freshfruits">
+            <img src="../images/index/新鲜水果.png" class="tabIcon">
+            <div class="item-title">新鲜水果</div>
+          </div>
+          <div class="tab-item" data-category="meats">
+            <img src="../images/index/肉类禽蛋.png" class="tabIcon">
+            <div class="item-title">肉类禽蛋</div>
+          </div>
+          <div class="tab-item" data-category="Grains">
+            <img src="../images/index/粮油米面.png" class="tabIcon">
+            <div class="item-title">粮油米面</div>
+          </div>
+          <div class="tab-item" data-category="seafoods">
+            <img src="../images/index/鱼1.png" class="tabIcon">
+            <div class="item-title">水产海鲜</div>
+          </div>
+          <div class="tab-item" data-category="drys">
+            <img src="../images/index/干货特产.png" class="tabIcon">
+            <div class="item-title">干货特产</div>
+          </div>
+          <div class="tab-item" data-category="natures">
+            <img src="../images/index/自然律动.png" class="tabIcon">
+            <div class="item-title">自然律动</div>
+          </div>
+        </div>
+      </div>
+      <!-- 商品列表将通过JS动态渲染 -->
+      <div class="tab-content">
+        <!--product--start -->
+        <div class="product-list" id="product-list">
+          <!-- 商品列表将通过JS动态渲染 -->
+
+
+
+        </div>
+        <!--product--end -->
+      </div>
+
+    </div>
+  </div>
+  <!-- end -->
+  
+
+  
+
+  <!--引入自己的js文件-->
+  <script src="../js/index.js"></script>
+</body>
+
+</html>
