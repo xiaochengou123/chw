@@ -184,7 +184,7 @@ if (window.location.pathname === '/chw/' || window.location.pathname.includes('i
       if (alist[i].indexOf(search.value) != -1) {
         const id_alist = products.find(item => item.name === alist[i])?.id;
         /*不能跳转方法 */
-        resultList.innerHTML = resultList.innerHTML + `<p><a href="./good.html?id=${id_alist}">${alist[i]}</a></p>`;
+        resultList.innerHTML = resultList.innerHTML + `<p><a href="./html/good.html?id=${id_alist}">${alist[i]}</a></p>`;
         // console.log(products.find(item=>item.name===alist[i])?.id);
         // --
         resultList.style.display = 'block';
