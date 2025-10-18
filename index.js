@@ -61,11 +61,9 @@ window.seckill = [
   { id: 38, name: '东北农家红糙米', price: 20.8, y_money: 30.2, time: 20, image: '../images/seckill/红米新米.jpg', Atter: '【健康之选】东北农家红糙米，营养丰富，健康饮食首选' }
 ];
 //======================================商品列表 · 结束区============================================
-
+console.log('当前路径:', window.location.pathname);
 //根据路径判断是否渲染
-if (window.location.pathname === '/' || 
-    window.location.pathname === '/index.html' ||
-    window.location.pathname.includes('/index.html')) {
+if (window.location.pathname === '/' || window.location.pathname.includes('index.html')) {
   console.log("index.js 已加载！");
   //获取本地存储数据
   let user = localStorage.getItem('currentUser');
@@ -1062,6 +1060,7 @@ if (window.location.pathname === '/' ||
     audio.play();//自动播放
   }
 }
+
 
 
 
