@@ -63,7 +63,9 @@ window.seckill = [
 //======================================商品列表 · 结束区============================================
 
 //根据路径判断是否渲染
-if (window.location.pathname.includes('index.html')) {
+if (window.location.pathname === '/' || 
+    window.location.pathname === '/index.html' ||
+    window.location.pathname.includes('/index.html') {
   //获取本地存储数据
   let user = localStorage.getItem('currentUser');
   /* 顶部菜单栏 */
@@ -1059,6 +1061,7 @@ if (window.location.pathname.includes('index.html')) {
     audio.play();//自动播放
   }
 }
+
 
 
 
