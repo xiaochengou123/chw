@@ -1,0 +1,365 @@
+/* 顶部通知栏*/
+/*顶部通知开始区域*/
+body {
+  background: #f5f5f5;
+  font-family: "Microsoft YaHei", sans-serif;
+  font-size: 14px;
+  zoom: 0.75; 
+  /* 缩小到 75% */
+}
+
+a {
+  text-decoration: none;
+}
+
+.shortcut {
+  width: 100%;
+  height: 32px;
+  /* background: #fafafa; */
+  background: #eee;
+}
+
+.shortcut .shortcut-c {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.shortcut .shortcut-c .shortcut-left {
+  display: flex;
+  align-items: center;
+}
+
+.shortcut .shortcut-c .left-iten {
+  margin-left: 10px;
+  padding-left: 10px;
+  font-family: PingFangSC-Regular;
+  font-size: 12px;
+  color: #999;
+  letter-spacing: 0;
+  height: 13px;
+}
+
+.f-c {
+  display: flex;
+  align-items: center;
+}
+
+/*左信息*/
+.f-c-left {
+  display: block;
+  font-size: 12px;
+  margin-left: 10px;
+  cursor: pointer;
+  /* 这里使用了pointer光标 */
+}
+
+.f-c-rigth {
+  display: block;
+  font-size: 12px;
+  margin-left: 10px;
+  cursor: pointer;
+  /* 这里使用了pointer光标 */
+}
+
+.shortcut .shortcut-c .shortcut-left .f-c-left {
+  color: #39bf3e;
+}
+
+.shortcut .shortcut-c .shortcut-left .f-c-rigth {
+  color: #999;
+}
+
+.shortcut .shortcut-c .shortcut-left .f-c-rigth:hover {
+  color: #39bf3e;
+}
+
+.shortcut .shortcut-c .bar {
+  position: relative;
+  /* 添加这个使子元素绝对定位基于此元素 */
+  z-index: 999;
+  right: 80px;
+  top: 0;
+  cursor: pointer;
+  display: inline-block;
+}
+
+/*下拉按钮样式*/
+.cascade-bar {
+  cursor: pointer;
+  margin-left: -15px;
+  z-index: 999;
+  height: 32px;
+  font-family: PingFangSC-Regular;
+  font-size: 10px;
+  color: #999;
+  letter-spacing: 0;
+  justify-content: center;
+  width: 80px;
+  transition: all 0.3s;
+}
+
+/*伪元素*/
+.cascade-bar:hover,
+.bar-content .emnu:hover {
+  color: #39bf3e;
+}
+
+/*下拉菜单内容 -》初始隐藏*/
+.bar-content {
+  display: none;
+  position: absolute;
+  /*相对定位*/
+  background-color: #fff;
+  opacity: 0;
+  transition: opacity 0.3s;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  /* 确保在最上层 */
+}
+
+/*菜单项样式*/
+.bar-content .emnu {
+  margin-left: 5px;
+  color: #999;
+  padding: 6px 10px;
+  display: block;
+  transition: background 0.3s;
+  font-family: PingFangSC-Regular;
+  font-size: 10px;
+}
+
+/* 激活状态下的样式->菜单项样式 */
+.bar.active .bar-content {
+  display: block;
+  opacity: 1;
+}
+
+/*------------------------------购物车--------------------*/
+.header {
+  background-color: #fff;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.cart-container {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.product-img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+}
+
+.quantity-btn {
+  width: 28px;
+  height: 28px;
+  border: 1px solid #ddd;
+  background: #f8f8f8;
+  text-align: center;
+  line-height: 26px;
+  cursor: pointer;
+}
+
+.quantity-input {
+  width: 50px;
+  height: 28px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+.cart-summary {
+  background-color: #fff;
+  border-top: 1px solid #e0e0e0;
+  position: sticky;
+  bottom: 0;
+}
+
+.btn-jd {
+  background-color: #e33333;
+  color: white;
+}
+
+.btn-jd:hover {
+  background-color: #c62828;
+  color: white;
+}
+
+.comment-section {
+  display: none;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.modal-content {
+  border-radius: 12px;
+}
+
+.form-check-label {
+  margin-left: 5px;
+  margin-top: 2px;
+
+}
+
+.product-checkbox,
+.form-check-input {
+  margin-top: .50em;
+  /* margin-top: 2px; */
+  cursor: pointer;
+  width: 16px;
+  height: 16px;
+}
+
+.wx,
+.zfb {
+  height: 16px;
+  margin-right: 4px;
+  width: 16px;
+  cursor: pointer;
+}
+
+/*输入框聚焦样式*/
+input {
+  /* padding: 10px; */
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-clip: padding-box;
+  position: relative;
+}
+
+input:focus {
+  border-color: transparent;
+  outline: none;
+  animation: borderGlow 1.5s infinite alternate;
+}
+
+@keyframes borderGlow {
+  0% {
+    box-shadow: 0 0 0 2px rgba(100, 200, 255, 0.5);
+  }
+
+  100% {
+    box-shadow: 0 0 0 2px rgba(255, 100, 200, 0.5);
+  }
+}
+
+/*弹窗*/
+.top {
+  width: 234px;
+  height: 39.5px;
+  position: fixed;
+  display: flex;
+  z-index: 2025;
+  text-align: center;
+  top: -90px;
+  /*30px 为导航栏高度*/
+  left: 45%;
+  /* 平滑效果 */
+  transition: all 0.5s ease;
+}
+.top {
+  transition: top 0.3s ease;
+}
+.top.show {
+  top: 30px;
+}
+.top.hide {
+  top: -90px;
+}
+
+.color {
+  background-color: #fff;
+  box-shadow: 0 12px 36px 0 rgba(49, 49, 77, 0.12);
+  border: 1px solid #d8eafc;
+  border-radius: 4px;
+}
+
+.img-elment {
+  width: 16px;
+  height: 16px;
+  margin: 12px;
+}
+
+.txt-elment {
+  margin: auto -4px;
+  font-size: 14px;
+  color: #39bf3e;
+  line-height: 1;
+}
+/* 结算弹窗样式 */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1050;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal.show {
+  display: block;
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 50% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 600px;
+  border-radius: 8px;
+  position: relative;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #e9ecef;
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+}
+
+.modal-title {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.close {
+  color: #aaa;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+}
+
+.modal-body {
+  margin-bottom: 15px;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  border-top: 1px solid #e9ecef;
+  padding-top: 15px;
+}
