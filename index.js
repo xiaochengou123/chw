@@ -63,7 +63,7 @@ window.seckill = [
 //======================================商品列表 · 结束区============================================
 console.log('当前路径:', window.location.pathname);
 //根据路径判断是否渲染
-if (window.location.pathname === '/' || window.location.pathname.includes('index.html')) {
+if (window.location.pathname === '/chw/' || window.location.pathname.includes('index.html')) {
   console.log("index.js 已加载！");
   //获取本地存储数据
   let user = localStorage.getItem('currentUser');
@@ -1060,6 +1060,7 @@ if (window.location.pathname === '/' || window.location.pathname.includes('index
     audio.play();//自动播放
   }
 }
+
 
 
 
