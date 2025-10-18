@@ -66,6 +66,7 @@ window.seckill = [
 if (window.location.pathname === '/' || 
     window.location.pathname === '/index.html' ||
     window.location.pathname.includes('/index.html')) {
+  console.log("index.js 已加载！");
   //获取本地存储数据
   let user = localStorage.getItem('currentUser');
   /* 顶部菜单栏 */
@@ -1061,6 +1062,7 @@ if (window.location.pathname === '/' ||
     audio.play();//自动播放
   }
 }
+
 
 
 
