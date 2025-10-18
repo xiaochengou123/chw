@@ -1,0 +1,380 @@
+/*==========================顶部通知栏=====================================*/
+/*顶部通知栏*/
+/*顶部通知开始区域*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #f7f7f7;
+  font-size: 14px;
+  font-family: "Microsoft YaHei", sans-serif;
+  zoom: 0.75;
+  /* 缩小到 75% */
+}
+
+a {
+  text-decoration: none;
+}
+
+.shortcut {
+  width: 100%;
+  height: 32px;
+  /* background: #fafafa; */
+  background: #eee;
+}
+
+.py-4 {
+  padding-top: 8rem !important;
+  padding-bottom: 1.5rem !important;
+}
+
+.shortcut .shortcut-c {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.shortcut .shortcut-c .shortcut-left {
+  display: flex;
+  align-items: center;
+}
+
+.shortcut .shortcut-c .left-iten {
+  margin-left: 10px;
+  padding-left: 10px;
+  font-family: PingFangSC-Regular;
+  font-size: 12px;
+  color: #999;
+  letter-spacing: 0;
+  height: 13px;
+}
+
+.f-c {
+  display: flex;
+  align-items: center;
+}
+
+/*左信息*/
+.f-c-left {
+  display: block;
+  font-size: 12px;
+  margin-left: 10px;
+  cursor: pointer;
+  /* 这里使用了pointer光标 */
+}
+
+.f-c-rigth {
+  display: block;
+  font-size: 12px;
+  margin-left: 10px;
+  cursor: pointer;
+  /* 这里使用了pointer光标 */
+}
+
+.shortcut .shortcut-c .shortcut-left .f-c-left {
+  color: #39bf3e;
+}
+
+.shortcut .shortcut-c .shortcut-left .f-c-rigth {
+  color: #999;
+}
+
+.shortcut .shortcut-c .shortcut-left .f-c-rigth:hover {
+  color: #39bf3e;
+}
+
+.shortcut .shortcut-c .bar {
+  position: relative;
+  /* 添加这个使子元素绝对定位基于此元素 */
+  z-index: 999;
+  right: 80px;
+  top: 0;
+  cursor: pointer;
+  display: inline-block;
+}
+
+/*下拉按钮样式*/
+.cascade-bar {
+  cursor: pointer;
+  margin-left: -15px;
+  z-index: 999;
+  height: 32px;
+  font-family: PingFangSC-Regular;
+  font-size: 10px;
+  color: #999;
+  letter-spacing: 0;
+  justify-content: center;
+  width: 80px;
+  transition: all 0.3s;
+}
+
+/*伪元素*/
+.cascade-bar:hover,
+.bar-content .emnu:hover {
+  color: #39bf3e;
+}
+
+/*下拉菜单内容 -》初始隐藏*/
+.bar-content {
+  display: none;
+  position: absolute;
+  /*相对定位*/
+  background-color: #fff;
+  opacity: 0;
+  transition: opacity 0.3s;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  /* 确保在最上层 */
+}
+
+/*菜单项样式*/
+.bar-content .emnu {
+  margin-left: 5px;
+  color: #999;
+  padding: 6px 10px;
+  display: block;
+  transition: background 0.3s;
+  font-family: PingFangSC-Regular;
+  font-size: 10px;
+}
+
+/* 激活状态下的样式->菜单项样式 */
+.bar.active .bar-content {
+  display: block;
+  opacity: 1;
+}
+
+.header {
+  background: #fff;
+}
+
+/*==========================顶部通知栏结束=====================================*/
+
+/*--------------------------顶部导航--------------------*/
+.order-card {
+  background: #fff;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.order-header {
+  padding: 12px 16px;
+  border-bottom: 1px solid #eee;
+  background: #f9f9f9;
+  display: flex;
+  align-items: center;
+}
+
+.order-body {
+  padding: 16px;
+}
+
+.order-item {
+  display: flex;
+  padding: 12px 0;
+  border-bottom: 1px dashed #eee;
+}
+
+.order-item:last-child {
+  border-bottom: none;
+}
+
+.order-item img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.order-item-info {
+  margin-left: 12px;
+  flex: 1;
+}
+
+.order-item-name {
+  font-size: 13px;
+  color: #333;
+}
+
+.order-item-price {
+  font-weight: bold;
+  color: #e4393c;
+  margin-top: 4px;
+}
+
+.order-status {
+  text-align: right;
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+  min-width: 100px;
+}
+
+.status-pending {
+  color: #999;
+}
+
+.status-shipped {
+  color: #007bff;
+}
+
+.status-received {
+  color: #28a745;
+}
+
+.order-actions {
+  text-align: right;
+  margin-top: 12px;
+}
+
+.btn-sm {
+  padding: 4px 8px;
+  font-size: 12px;
+
+}
+
+.batch-delete-btn {
+  margin-bottom: 16px;
+  /* margin-left: 120px; */
+}
+
+/* 复选框列 */
+.checkbox-col {
+  width: 50px;
+  text-align: center;
+  padding: 12px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 订单主容器：加入复选框布局 */
+.order-with-checkbox {
+  display: flex;
+}
+
+.order-content {
+  flex: 1;
+}
+
+/* 筛选标签 */
+.filter-tabs {
+  margin-bottom: 16px;
+  display: flex;
+  gap: 8px;
+}
+
+.filter-tabs button {
+  flex: 1;
+  padding: 8px 0;
+  border: none;
+  background: #eee;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.filter-tabs button.active {
+  background: #007bff;
+  color: white;
+}
+
+.comment-input {
+  width: 100%;
+  padding: 8px;
+  margin: 8px 0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 13px;
+}
+
+.text-muted {
+  color: #6c757d !important;
+}
+
+/*时间向右*/
+.t1 {
+  margin-left: 100px;
+}
+
+/*输入框聚焦样式*/
+input {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-clip: padding-box;
+  position: relative;
+}
+
+input:focus {
+  border-color: transparent;
+  outline: none;
+  animation: borderGlow 1.5s infinite alternate;
+}
+
+@keyframes borderGlow {
+  0% {
+    box-shadow: 0 0 0 2px rgba(100, 200, 255, 0.5);
+  }
+
+  100% {
+    box-shadow: 0 0 0 2px rgba(255, 100, 200, 0.5);
+  }
+}
+
+/*弹窗*/
+.top {
+  width: 234px;
+  height: 39.5px;
+  position: fixed;
+  display: flex;
+  z-index: 2025;
+  text-align: center;
+  top: -90px;
+  /*30px 为导航栏高度*/
+  left: 45%;
+  /* 平滑效果 */
+  transition: all 0.5s ease;
+}
+
+.top {
+  transition: top 0.3s ease;
+}
+
+.top.show {
+  top: 30px;
+}
+
+.top.hide {
+  top: -90px;
+}
+
+
+.color {
+  background-color: #fff;
+  box-shadow: 0 12px 36px 0 rgba(49, 49, 77, 0.12);
+  border: 1px solid #d8eafc;
+  border-radius: 4px;
+}
+
+.img-elment {
+  width: 16px;
+  height: 16px;
+  margin: 12px;
+}
+
+.txt-elment {
+  margin: auto -4px;
+  font-size: 14px;
+  color: #39bf3e;
+  line-height: 1;
+}
