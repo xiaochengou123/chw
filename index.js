@@ -3,62 +3,62 @@ console.log("index.js 已加载！");
 //将products提升到全局变量
 window.products = [
   // 新鲜水果
-  { id: 1, name: '山东红富士苹果', price: 29.90, category: 'freshfruits', image: '../images/product/山东红富士苹果.jpg', Atter: '【脆甜多汁】山东烟台红富士苹果 5斤家庭装 新鲜水果' },
-  { id: 2, name: '海南金煌芒果', price: 39.90, category: 'freshfruits', image: '../images/product/海南金煌芒果.jpg', Atter: '【果香浓郁】海南金煌大芒果 3斤精品装 当季新鲜水果' },
+  { id: 1, name: '山东红富士苹果', price: 29.90, category: 'freshfruits', image: './images/product/山东红富士苹果.jpg', Atter: '【脆甜多汁】山东烟台红富士苹果 5斤家庭装 新鲜水果' },
+  { id: 2, name: '海南金煌芒果', price: 39.90, category: 'freshfruits', image: './images/product/海南金煌芒果.jpg', Atter: '【果香浓郁】海南金煌大芒果 3斤精品装 当季新鲜水果' },
   // 肉类禽蛋
-  { id: 3, name: '内蒙古草原羊肉', price: 128.00, category: 'meats', image: '../images/product/内蒙古草原羊肉.jpg', Atter: '【鲜嫩不膻】内蒙古草原新鲜羊肉 2斤整切装 冷链直达' },
-  { id: 4, name: '农家散养土鸡蛋', price: 45.90, category: 'meats', image: '../images/product/农家散养土鸡蛋 .png', Atter: '【蛋黄醇香】农家散养柴鸡蛋 30枚 无激素 新鲜禽蛋' },
+  { id: 3, name: '内蒙古草原羊肉', price: 128.00, category: 'meats', image: './images/product/内蒙古草原羊肉.jpg', Atter: '【鲜嫩不膻】内蒙古草原新鲜羊肉 2斤整切装 冷链直达' },
+  { id: 4, name: '农家散养土鸡蛋', price: 45.90, category: 'meats', image: './images/product/农家散养土鸡蛋 .png', Atter: '【蛋黄醇香】农家散养柴鸡蛋 30枚 无激素 新鲜禽蛋' },
   // 粮油米面
-  { id: 5, name: '东北五常大米', price: 99.90, category: 'Grains', image: '../images/product/东北五常大米 10kg.jpg', Atter: '【米香四溢】东北五常稻花香大米 10公斤 真正原产地装' },
-  { id: 6, name: '鲁花花生油', price: 139.90, category: 'Grains', image: '../images/product/鲁花花生油.jpg', Atter: '【压榨纯香】鲁花一级压榨花生油 5L 家庭食用油' },
+  { id: 5, name: '东北五常大米', price: 99.90, category: 'Grains', image: './images/product/东北五常大米 10kg.jpg', Atter: '【米香四溢】东北五常稻花香大米 10公斤 真正原产地装' },
+  { id: 6, name: '鲁花花生油', price: 139.90, category: 'Grains', image: './images/product/鲁花花生油.jpg', Atter: '【压榨纯香】鲁花一级压榨花生油 5L 家庭食用油' },
   // 水产海鲜
-  { id: 7, name: '阳澄湖大闸蟹', price: 198.00, category: 'seafoods', image: '../images/product/阳澄湖大闸蟹 4只装.png', Atter: '【膏肥黄满】阳澄湖精品大闸蟹 4只礼盒装（公3.5两/母2.5两）' },
-  { id: 8, name: '舟山带鱼', price: 68.80, category: 'seafoods', image: '../images/product/舟山带鱼 1kg.jpg', Atter: '【肉厚刺少】舟山深海野生带鱼段 1kg 冷冻保鲜 海鲜速达' },
+  { id: 7, name: '阳澄湖大闸蟹', price: 198.00, category: 'seafoods', image: './images/product/阳澄湖大闸蟹 4只装.png', Atter: '【膏肥黄满】阳澄湖精品大闸蟹 4只礼盒装（公3.5两/母2.5两）' },
+  { id: 8, name: '舟山带鱼', price: 68.80, category: 'seafoods', image: './images/product/舟山带鱼 1kg.jpg', Atter: '【肉厚刺少】舟山深海野生带鱼段 1kg 冷冻保鲜 海鲜速达' },
   // 干货特产
-  { id: 9, name: '新疆特级红枣', price: 35.90, category: 'drys', image: '../images/product/新疆特级红枣 500g.png', Atter: '【自然甜润】新疆若羌特级灰枣 500g 精选大果 干果礼盒' },
-  { id: 10, name: '福建古田银耳', price: 42.80, category: 'drys', image: '../images/product/福建古田银耳.jpg', Atter: '【胶质丰富】福建古田头茬银耳 150g 精品干货 养颜滋补' },
+  { id: 9, name: '新疆特级红枣', price: 35.90, category: 'drys', image: './images/product/新疆特级红枣 500g.png', Atter: '【自然甜润】新疆若羌特级灰枣 500g 精选大果 干果礼盒' },
+  { id: 10, name: '福建古田银耳', price: 42.80, category: 'drys', image: './images/product/福建古田银耳.jpg', Atter: '【胶质丰富】福建古田头茬银耳 150g 精品干货 养颜滋补' },
   // 自然律动（杀虫剂）
-  { id: 11, name: '自然律动·果蔬卫士', price: 59.90, category: 'natures', image: '../images/product/自然律动·果蔬卫士.jpg', Atter: '【植物配方】自然律动果蔬清洗剂 果蔬卫士 500ml 食品级安全' },
-  { id: 12, name: '自然律动·虫害克星', price: 78.50, category: 'natures', image: '../images/product/自然律动·虫害克星.jpg', Atter: '【绿色防护】自然律动虫害克星 1L 天然植物驱虫喷雾 家居可用' }
+  { id: 11, name: '自然律动·果蔬卫士', price: 59.90, category: 'natures', image: './images/product/自然律动·果蔬卫士.jpg', Atter: '【植物配方】自然律动果蔬清洗剂 果蔬卫士 500ml 食品级安全' },
+  { id: 12, name: '自然律动·虫害克星', price: 78.50, category: 'natures', image: './images/product/自然律动·虫害克星.jpg', Atter: '【绿色防护】自然律动虫害克星 1L 天然植物驱虫喷雾 家居可用' }
 ]
 window.seckill = [
   // 8:00-10:00   
-  { id: 13, name: '老上海风味咸蛋黄粢饭团', price: 35.80, y_money: 44.30, time: 10, image: '../images/seckill/米达.jpg', Atter: '【经典口味】老上海风味咸蛋黄粢饭团，多重美味一网打尽' },
-  { id: 14, name: '中秋礼品梨子雪梨水果礼盒', price: 19.20, y_money: 27.43, time: 10, image: '../images/seckill/雪梨.jpg', Atter: '【中秋佳选】精选梨子雪梨水果礼盒，健康美味共享团圆' },
-  { id: 15, name: '国产脆蜜桃', price: 17.90, y_money: 24.90, time: 10, image: '../images/seckill/桃子.jpg', Atter: '【鲜甜爽口】国产脆蜜桃，自然成熟，口感绝佳' },
-  { id: 16, name: '大葡萄整箱装', price: 26.40, y_money: 75.60, time: 10, image: '../images/seckill/葡萄.jpg', Atter: '【果香四溢】大葡萄整箱装，新鲜直达，味美多汁' },
-  { id: 17, name: '绿心猕猴桃', price: 12.69, y_money: 14.69, time: 10, image: '../images/seckill/猕猴桃.jpg', Atter: '【营养丰富】绿心猕猴桃，维C满满，健康每一天' },
-  { id: 18, name: '蔬菜病虫害诊断指南', price: 117.00, y_money: 130.00, time: 10, image: '../images/seckill/蔬菜病虫害诊断书.jpg', Atter: '【专业指导】蔬菜病虫害诊断指南，助您轻松解决种植难题' },
+  { id: 13, name: '老上海风味咸蛋黄粢饭团', price: 35.80, y_money: 44.30, time: 10, image: './images/seckill/米达.jpg', Atter: '【经典口味】老上海风味咸蛋黄粢饭团，多重美味一网打尽' },
+  { id: 14, name: '中秋礼品梨子雪梨水果礼盒', price: 19.20, y_money: 27.43, time: 10, image: './images/seckill/雪梨.jpg', Atter: '【中秋佳选】精选梨子雪梨水果礼盒，健康美味共享团圆' },
+  { id: 15, name: '国产脆蜜桃', price: 17.90, y_money: 24.90, time: 10, image: './images/seckill/桃子.jpg', Atter: '【鲜甜爽口】国产脆蜜桃，自然成熟，口感绝佳' },
+  { id: 16, name: '大葡萄整箱装', price: 26.40, y_money: 75.60, time: 10, image: './images/seckill/葡萄.jpg', Atter: '【果香四溢】大葡萄整箱装，新鲜直达，味美多汁' },
+  { id: 17, name: '绿心猕猴桃', price: 12.69, y_money: 14.69, time: 10, image: './images/seckill/猕猴桃.jpg', Atter: '【营养丰富】绿心猕猴桃，维C满满，健康每一天' },
+  { id: 18, name: '蔬菜病虫害诊断指南', price: 117.00, y_money: 130.00, time: 10, image: './images/seckill/蔬菜病虫害诊断书.jpg', Atter: '【专业指导】蔬菜病虫害诊断指南，助您轻松解决种植难题' },
 
   // 10:00-12:00  
-  { id: 19, name: '福建平和红心柚', price: 20.9, y_money: 34.8, time: 12, image: '../images/seckill/红心柚.jpg', Atter: '【甜蜜多汁】福建平和红心柚，鲜甜爽口，每一口都是享受' },
-  { id: 20, name: '陕西大荔冬枣青枣', price: 19.6, y_money: 29.6, time: 12, image: '../images/seckill/青枣.jpg', Atter: '【天然鲜甜】陕西大荔冬枣青枣，清甜可口，营养丰富' },
-  { id: 21, name: '印度青苹果', price: 32, y_money: 42, time: 12, image: '../images/seckill/青苹果.jpg', Atter: '【纯甜不酸】印度青苹果，现摘现发，品质保证' },
-  { id: 22, name: '东北农家红糙米', price: 20.8, y_money: 30.2, time: 12, image: '../images/seckill/红米新米.jpg', Atter: '【健康之选】东北农家红糙米，营养丰富，健康饮食首选' },
-  { id: 23, name: '山药刀削面', price: 5.9, y_money: 9, time: 12, image: '../images/seckill/干拌面.jpg', Atter: '【独特风味】含20%山药的刀削面，劲道十足，美味更健康' },
-  { id: 24, name: '兽医预防科目高效复习书', price: 40, y_money: 60, time: 12, image: '../images/seckill/兽医官方预防科目.jpg', Atter: '【备考必备】兽医预防科目高效复习书，助力考试成功' },
+  { id: 19, name: '福建平和红心柚', price: 20.9, y_money: 34.8, time: 12, image: './images/seckill/红心柚.jpg', Atter: '【甜蜜多汁】福建平和红心柚，鲜甜爽口，每一口都是享受' },
+  { id: 20, name: '陕西大荔冬枣青枣', price: 19.6, y_money: 29.6, time: 12, image: './images/seckill/青枣.jpg', Atter: '【天然鲜甜】陕西大荔冬枣青枣，清甜可口，营养丰富' },
+  { id: 21, name: '印度青苹果', price: 32, y_money: 42, time: 12, image: './images/seckill/青苹果.jpg', Atter: '【纯甜不酸】印度青苹果，现摘现发，品质保证' },
+  { id: 22, name: '东北农家红糙米', price: 20.8, y_money: 30.2, time: 12, image: './images/seckill/红米新米.jpg', Atter: '【健康之选】东北农家红糙米，营养丰富，健康饮食首选' },
+  { id: 23, name: '山药刀削面', price: 5.9, y_money: 9, time: 12, image: './images/seckill/干拌面.jpg', Atter: '【独特风味】含20%山药的刀削面，劲道十足，美味更健康' },
+  { id: 24, name: '兽医预防科目高效复习书', price: 40, y_money: 60, time: 12, image: './images/seckill/兽医官方预防科目.jpg', Atter: '【备考必备】兽医预防科目高效复习书，助力考试成功' },
 
   // 12:00-14:00
-  { id: 25, name: '东北农家红糙米', price: 20.8, y_money: 30.2, time: 14, image: '../images/seckill/红米新米.jpg', Atter: '【健康之选】东北农家红糙米，营养丰富，健康饮食首选' },
-  { id: 26, name: '广西蜜桔', price: 9.9, y_money: 12.9, time: 14, image: '../images/seckill/橘子.jpg', Atter: '【清甜多汁】广西蜜桔，果香浓郁，老少皆宜' },
+  { id: 25, name: '东北农家红糙米', price: 20.8, y_money: 30.2, time: 14, image: './images/seckill/红米新米.jpg', Atter: '【健康之选】东北农家红糙米，营养丰富，健康饮食首选' },
+  { id: 26, name: '广西蜜桔', price: 9.9, y_money: 12.9, time: 14, image: './images/seckill/橘子.jpg', Atter: '【清甜多汁】广西蜜桔，果香浓郁，老少皆宜' },
 
   // 14:00-16:00
-  { id: 27, name: '应季新鲜孕妇水果礼盒', price: 56.80, y_money: 126.80, time: 16, image: '../images/seckill/石榴.jpg', Atter: '【贴心呵护】应季新鲜孕妇水果礼盒，精选优质果品，关爱孕期健康' },
-  { id: 28, name: '广西蜜桔', price: 9.9, y_money: 12.9, time: 16, image: '../images/seckill/橘子.jpg', Atter: '【清甜多汁】广西蜜桔，果香浓郁，老少皆宜' },
-  { id: 29, name: '香辣味豆腐', price: 42, y_money: 35, time: 16, image: '../images/seckill/豆腐干.png', Atter: '【麻辣过瘾】香辣味豆腐，豆香浓郁，越嚼越香' },
-  { id: 30, name: '云南野生山慈菇干货', price: 319, y_money: 368, time: 16, image: '../images/seckill/药材.jpg', Atter: '【地道药材】云南野生山慈菇干货，无硫加工，传统滋补佳品' },
+  { id: 27, name: '应季新鲜孕妇水果礼盒', price: 56.80, y_money: 126.80, time: 16, image: './images/seckill/石榴.jpg', Atter: '【贴心呵护】应季新鲜孕妇水果礼盒，精选优质果品，关爱孕期健康' },
+  { id: 28, name: '广西蜜桔', price: 9.9, y_money: 12.9, time: 16, image: './images/seckill/橘子.jpg', Atter: '【清甜多汁】广西蜜桔，果香浓郁，老少皆宜' },
+  { id: 29, name: '香辣味豆腐', price: 42, y_money: 35, time: 16, image: './images/seckill/豆腐干.png', Atter: '【麻辣过瘾】香辣味豆腐，豆香浓郁，越嚼越香' },
+  { id: 30, name: '云南野生山慈菇干货', price: 319, y_money: 368, time: 16, image: './images/seckill/药材.jpg', Atter: '【地道药材】云南野生山慈菇干货，无硫加工，传统滋补佳品' },
 
   // 16:00-18:00
-  { id: 31, name: '深海小鱼条', price: 69.90, y_money: 80, time: 18, image: '../images/seckill/鱼.jpg', Atter: '【鲜嫩可口】深海小鱼条，肉质紧实，适合多种烹饪方式' },
-  { id: 32, name: '小米蕉香蕉', price: 6.8, y_money: 12.8, time: 18, image: '../images/seckill/小米蕉香蕉.jpg', Atter: '【软糯香甜】小米蕉香蕉，小巧玲珑，一口一个超满足' },
-  { id: 33, name: '法兰西西梅干', price: 38.11, y_money: 59.9, time: 18, image: '../images/seckill/西梅.jpg', Atter: '【0添加】法兰西西梅干，自然风干，果肉厚实，酸甜开胃' },
-  { id: 34, name: '茶叶绿色高效种植技术书', price: 50, y_money: 36.9, time: 18, image: '../images/seckill/茶叶.jpg', Atter: '【科技助农】茶叶绿色高效种植与加工新技术，提升产量与品质' },
+  { id: 31, name: '深海小鱼条', price: 69.90, y_money: 80, time: 18, image: './images/seckill/鱼.jpg', Atter: '【鲜嫩可口】深海小鱼条，肉质紧实，适合多种烹饪方式' },
+  { id: 32, name: '小米蕉香蕉', price: 6.8, y_money: 12.8, time: 18, image: './images/seckill/小米蕉香蕉.jpg', Atter: '【软糯香甜】小米蕉香蕉，小巧玲珑，一口一个超满足' },
+  { id: 33, name: '法兰西西梅干', price: 38.11, y_money: 59.9, time: 18, image: './images/seckill/西梅.jpg', Atter: '【0添加】法兰西西梅干，自然风干，果肉厚实，酸甜开胃' },
+  { id: 34, name: '茶叶绿色高效种植技术书', price: 50, y_money: 36.9, time: 18, image: './images/seckill/茶叶.jpg', Atter: '【科技助农】茶叶绿色高效种植与加工新技术，提升产量与品质' },
 
   // 18:00-20:00
-  { id: 35, name: '福建平和红心柚', price: 20.9, y_money: 34.8, time: 20, image: '../images/seckill/红心柚.jpg', Atter: '【甜蜜多汁】福建平和红心柚，鲜甜爽口，每一口都是享受' },
-  { id: 36, name: '陕西大荔冬枣青枣', price: 19.6, y_money: 29.6, time: 20, image: '../images/seckill/青枣.jpg', Atter: '【天然鲜甜】陕西大荔冬枣青枣，清甜可口，营养丰富' },
-  { id: 37, name: '印度青苹果', price: 32, y_money: 42, time: 20, image: '../images/seckill/青苹果.jpg', Atter: '【纯甜不酸】印度青苹果，现摘现发，品质保证' },
-  { id: 38, name: '东北农家红糙米', price: 20.8, y_money: 30.2, time: 20, image: '../images/seckill/红米新米.jpg', Atter: '【健康之选】东北农家红糙米，营养丰富，健康饮食首选' }
+  { id: 35, name: '福建平和红心柚', price: 20.9, y_money: 34.8, time: 20, image: './images/seckill/红心柚.jpg', Atter: '【甜蜜多汁】福建平和红心柚，鲜甜爽口，每一口都是享受' },
+  { id: 36, name: '陕西大荔冬枣青枣', price: 19.6, y_money: 29.6, time: 20, image: './images/seckill/青枣.jpg', Atter: '【天然鲜甜】陕西大荔冬枣青枣，清甜可口，营养丰富' },
+  { id: 37, name: '印度青苹果', price: 32, y_money: 42, time: 20, image: './images/seckill/青苹果.jpg', Atter: '【纯甜不酸】印度青苹果，现摘现发，品质保证' },
+  { id: 38, name: '东北农家红糙米', price: 20.8, y_money: 30.2, time: 20, image: './images/seckill/红米新米.jpg', Atter: '【健康之选】东北农家红糙米，营养丰富，健康饮食首选' }
 ];
 //======================================商品列表 · 结束区============================================
 console.log('当前路径:', window.location.pathname);
@@ -73,7 +73,7 @@ if (window.location.pathname === '/chw/' || window.location.pathname.includes('i
   const baractive = document.getElementById("hoverDropdown");
   const bar = document.querySelector('.cascade-bar');
   const img = document.querySelector('.imageemnu');
-  const imgArr_top = ["../images/index/emnu1.png", "../images/index/emnu2.png"];
+  const imgArr_top = ["./images/index/emnu1.png", "./images/index/emnu2.png"];
   const emnu = document.querySelector('.emnu');
   /*买家中心 菜单+图片 */
   /* 鼠标移入，进行添加 */
@@ -110,15 +110,15 @@ if (window.location.pathname === '/chw/' || window.location.pathname.includes('i
       // 倒计时3秒后跳转到登录页面
       localStorage.setItem('ok-login', '0');
 
-      window.location.href = "../html/login.html";
+      window.location.href = "./html/login.html";
 
     }
   });
   var u = localStorage.getItem('u') == '1' ? '1' : null;
   if (u == '1') {
     //你已登入
-    audio_open('../audio/login.wav');
-    element('../images/massages/success.png', '你已登入', '#39bf3e');
+    audio_open('./audio/login.wav');
+    element('./images/massages/success.png', '你已登入', '#39bf3e');
     localStorage.removeItem('u');
   }
   if (currentUser) {
@@ -132,16 +132,16 @@ if (window.location.pathname === '/chw/' || window.location.pathname.includes('i
     document.querySelector(".hn-text").
       innerHTML = `<span class="hn-text">Hi,${currentUser}</span>`;
     //修改div的文字内容
-    bar.innerHTML = `<div class="cascade-bar f-c">${currentUser}<img id="imageemnu" src="../images/index/emnu2.png" style="width: 8px"></div>`;
+    bar.innerHTML = `<div class="cascade-bar f-c">${currentUser}<img id="imageemnu" src="./images/index/emnu2.png" style="width: 8px"></div>`;
 
 
     //点击退出
     emnu.addEventListener('click', () => {
       // alert('你已退出登录');
 
-      element('../images/massages/primary.png', '你已退出登录', '#1296db');
+      element('./images/massages/primary.png', '你已退出登录', '#1296db');
       setTimeout(() => {
-        window.location.href = "../html/login.html";
+        window.location.href = "./html/login.html";
         localStorage.removeItem('currentUser');
       }, 1000);
 
@@ -316,7 +316,7 @@ if (window.location.pathname === '/chw/' || window.location.pathname.includes('i
   //预加载时渲染，请别忽略他的存在
   function createData() {
     if (soldProducts.length == 0) {
-      fetch('../json/data.json')
+      fetch('./json/data.json')
         .then((result) => {
           return result.json();
         })
@@ -436,7 +436,7 @@ if (window.location.pathname === '/chw/' || window.location.pathname.includes('i
           //  console.log(product);
           // console.log('点击了商品：', product.id);
           // 跳转商品详情
-          window.location.href = `../html/good.html?id=${productId}`;
+          window.location.href = `./html/good.html?id=${productId}`;
         }
 
       }
@@ -462,7 +462,7 @@ if (window.location.pathname === '/chw/' || window.location.pathname.includes('i
           //  console.log(productId);
           // console.log('点击了商品：', product.id);
           // 跳转商品详情
-          window.location.href = `../html/good.html?id=${productId}`;
+          window.location.href = `./html/good.html?id=${productId}`;
         }
       }
     });
@@ -521,8 +521,8 @@ if (window.location.pathname === '/chw/' || window.location.pathname.includes('i
       localStorage.setItem(userData.email, JSON.stringify(userData));
       // 更新购物车数量显示
       updateCartCount(userData);
-      audio_open('../audio/successful.ogg');
-      element('../images/massages/success.png', '添加成功', '#39bf3e');
+      audio_open('./audio/successful.ogg');
+      element('./images/massages/success.png', '添加成功', '#39bf3e');
       // alert('已成功添加到购物车');
     };
 
@@ -612,21 +612,21 @@ if (window.location.pathname === '/chw/' || window.location.pathname.includes('i
   const elevator_img = document.querySelector('.elevator_img');
   /*top_img鼠标移入 */
   elevator_totop.onmouseover = () => {
-    elevator_img.src = '../images/elevator/返回顶部下.png';
+    elevator_img.src = './images/elevator/返回顶部下.png';
   }
   /*top_img鼠标移出 */
   elevator_totop.onmouseout = () => {
-    elevator_img.src = '../images/elevator/返回顶部.png';
+    elevator_img.src = './images/elevator/返回顶部.png';
   }
   const card_a = document.querySelector('.elevator_item');
   const card_img = document.querySelector('.cart-img');
   /*card_img鼠标移入 */
   card_a.onmouseover = () => {
-    card_img.src = '../images/elevator/购物车下.png';
+    card_img.src = './images/elevator/购物车下.png';
   }
   /*card_img鼠标移出 */
   card_a.onmouseout = () => {
-    card_img.src = '../images/elevator/购物车.png';
+    card_img.src = './images/elevator/购物车.png';
   }
   //回到顶部 
   const elevator_item = document.querySelector('.elevator_item');
@@ -666,7 +666,7 @@ if (window.location.pathname === '/chw/' || window.location.pathname.includes('i
     const savedAvatar = localStorage.getItem(user);
     // console.log(JSON.parse(savedAvatar).image);
     if (JSON.parse(savedAvatar).image === '') {
-      avatarImg.src = '../images/index/avatar-default.png';
+      avatarImg.src = './images/index/avatar-default.png';
     } else {
       avatarImg.src = JSON.parse(savedAvatar).image;
     }
@@ -694,7 +694,7 @@ if (window.location.pathname === '/chw/' || window.location.pathname.includes('i
         localStorage.setItem(user, JSON.stringify(userData));
 
         // alert('头像更换成功！');
-        element('../images/massages/primary.png', '恭喜您，成功更换头像!', '#1296db');
+        element('./images/massages/primary.png', '恭喜您，成功更换头像!', '#1296db');
       };
       reader.readAsDataURL(file);
     });
@@ -702,9 +702,9 @@ if (window.location.pathname === '/chw/' || window.location.pathname.includes('i
   let pro;
   //动态渲染first-item选项卡
   let index1 = 0;
-  let catearr = ['商品选项卡图片', '../images/cate/cate-sgzw.png', '../images/cate/cate-qcrd.png'
-    , '../images/cate/cate-lymm.png', '../images/cate/cate-ggkb.png'
-    , '../images/cate/cate-shuic.png', '../images/cate/cate-mmhc.png'
+  let catearr = ['商品选项卡图片', './images/cate/cate-sgzw.png', './images/cate/cate-qcrd.png'
+    , './images/cate/cate-lymm.png', './images/cate/cate-ggkb.png'
+    , './images/cate/cate-shuic.png', './images/cate/cate-mmhc.png'
   ];
   const category_bg = document.querySelector('.category-bg');
   products.forEach(product => {
@@ -1060,7 +1060,6 @@ if (window.location.pathname === '/chw/' || window.location.pathname.includes('i
     audio.play();//自动播放
   }
 }
-
 
 
 
