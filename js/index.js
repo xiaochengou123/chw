@@ -313,7 +313,9 @@ if (window.location.pathname === '/chw/' || window.location.pathname.includes('i
   //获取DOM
   const homeCartCount = document.getElementById('homeCartCount');
   let soldProducts = JSON.parse(localStorage.getItem('soldProducts')) || [];//获取所有已售商品信息
-  //预加载时渲染，请别忽略他的存在
+window.addEventListener('load', function() {
+  createData()
+});  //预加载时渲染，请别忽略他的存在
   function createData() {
     if (soldProducts.length == 0) {
       fetch('./json/data.json')
@@ -1060,6 +1062,7 @@ if (window.location.pathname === '/chw/' || window.location.pathname.includes('i
     audio.play();//自动播放
   }
 }
+
 
 
 
