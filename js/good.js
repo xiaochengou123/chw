@@ -194,7 +194,7 @@ bigImg.appendChild(imgLeft);
 const bigImageIn = document.getElementById('big');
 const imgIn = document.createElement('img');
 imgIn.className = 'img';
-imgIn.src = product.image;
+imgIn.src ="."+product.image;
 bigImageIn.appendChild(imgIn);
 
 //放大镜
@@ -742,4 +742,5 @@ function element(imgSrc, textContent, textColor) {
 document.addEventListener('DOMContentLoaded', function () {
     initCartCount(); // 初始化购物车数量
 });
+
 
