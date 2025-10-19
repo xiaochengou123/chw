@@ -270,7 +270,7 @@ document.getElementById('confirmCheckout').addEventListener('click', function ()
                     <input class="form-check-input product-checkbox" type="checkbox" data-id="${product.id}" ${product.selected ? 'checked' : ''}>
                 </div>
                 <div class="col-3">
-                    <img src="${product.image}" alt="${product.name}" class="product-img">
+                    <img src=".${product.image}" alt="${product.name}" class="product-img">
                 </div>
                 <div class="col-4">
                     <h6>${product.name}</h6>
@@ -424,4 +424,5 @@ function element(imgSrc, textContent, textColor) {
   // 如果你需要外部能控制关闭，可以返回 clearTimers
   return clearTimers;
 }
+
 
