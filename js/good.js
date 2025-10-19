@@ -48,7 +48,7 @@ designDiv.className = 'good-design';
 //创建款式左图片
 const imgDiv = document.createElement('img');
 imgDiv.className = 'good-image';
-imgDiv.src = product.image;
+imgDiv.src ="."+product.image;
 //创建右名称
 const titleDiv = document.createElement('div');
 titleDiv.className = 'good-title';
@@ -186,7 +186,7 @@ addToCart[0].addEventListener('click', function () {
 //渲染左侧大图
 const bigImg = document.getElementById('good-left-image');
 const imgLeft = document.createElement('img');
-imgLeft.src = product.image;
+imgLeft.src ="."+product.image;
 imgLeft.className = 'good-left-image';
 bigImg.appendChild(imgLeft);
 
@@ -742,3 +742,4 @@ function element(imgSrc, textContent, textColor) {
 document.addEventListener('DOMContentLoaded', function () {
     initCartCount(); // 初始化购物车数量
 });
+
