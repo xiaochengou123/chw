@@ -165,7 +165,7 @@ function renderOrders() {
                   ${order.items.map(item => `
                     <div class="order-item">
                     <a href="../html/good.html?id=${item.id}">
-                      <img src="${item.image}" alt="${item.name}">
+                      <img src=".${item.image}" alt="${item.name}">
                       <div class="order-item-info">
                        
                         <div class="order-item-name">${item.name}</div>
@@ -390,5 +390,6 @@ function element(imgSrc, textContent, textColor) {
   return clearTimers;
 
 }
+
 
 
