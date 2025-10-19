@@ -169,7 +169,7 @@ function renderOrders() {
                       <div class="order-item-info">
                        
                         <div class="order-item-name">${item.name}</div>
-                        <div class="order-item-price">¥${item.price.toFixed(2)} × ${item.quantity}</div>
+                        <div class="order-item-price">¥${item.price} × ${item.quantity}</div>
                         </a>
                         </div>
                       
@@ -388,4 +388,5 @@ function element(imgSrc, textContent, textColor) {
 
   // 如果你需要外部能控制关闭，可以返回 clearTimers
   return clearTimers;
+
 }
