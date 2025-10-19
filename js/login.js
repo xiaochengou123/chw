@@ -127,7 +127,7 @@ const log = function () {
       //保存当前登入用户邮箱(关键一步)
       localStorage.setItem('currentUser', names.value);
       localStorage.setItem('u', '1');
-      window.location.href = "../html/index.html";
+      window.location.href = "/index.html";
     } else {
 
       close()
@@ -356,3 +356,4 @@ function close() {
   document.body.style.overflow = 'auto';//防止背景滚动
 
 }
+
