@@ -1,5 +1,3 @@
-
-
 //=========================================顶部开始区域=======================================
 /* 顶部菜单栏 */
 /* 悬浮时的样式 */
@@ -64,11 +62,27 @@ if (currentUser) {
 // 存储键名
 const STORAGE_KEY = 'userAddresses';
 // 地址数据存储
-let addresses = JSON.parse(localStorage.getItem(STORAGE_KEY)) || [];
+let addresses = [];
 let ID = 1;
 //订单和已售商品数据存储
 let orders = JSON.parse(localStorage.getItem('orders')) || []; // 存储所有订单
 let soldProducts = JSON.parse(localStorage.getItem('soldProducts')) || [];//存储所有已售商品信息
+
+// 获取当前用户的地址数据
+function getUserAddresses() {
+  const userData = JSON.parse(localStorage.getItem(currentUser)) || {};
+  return userData.userAddresses || [];
+}
+
+// 保存地址到用户数据中
+function saveUserAddresses(addressData) {
+  const userData = JSON.parse(localStorage.getItem(currentUser)) || {};
+  userData.userAddresses = addressData;
+  localStorage.setItem(currentUser, JSON.stringify(userData));
+  // 更新当前 addresses 数组
+  addresses = addressData;
+}
+
 //根据id寻找对应数据
 function findProductById() {
   //获取url参数
@@ -294,6 +308,7 @@ increaseordecrease();
 //================================订单功能==============================
 const btn = document.querySelector('.btn');
 btn.addEventListener('click', function () {
+  addresses = getUserAddresses();
   if (addresses.length == 0) {
     modalOverlay.classList.add('active');
     document.body.style.overflow = 'hidden'; // 防止背景滚动
@@ -466,6 +481,8 @@ function initlistItem() {
   listWrap.innerHTML = '';//清除旧的
 
   for (let i = addresses.map(item => item).length - 1; i >= 0; i--) {
+    if(addresses[i].username==currentUser)
+    {
     listItemWrap = document.createElement('div');
     listItemWrap.className = 'listItemWrap';
     let active;//谁第一，就给他border属性
@@ -491,6 +508,7 @@ function initlistItem() {
                 <!-- 空隙，有个间距 -->
                 <div class="listErrorTip"></div>
    `;//新增新的
+
     } else {
       listItemWrap.innerHTML = `
                 <!-- 地址列表核心区域 -->
@@ -514,6 +532,7 @@ function initlistItem() {
     }
 
     listWrap.appendChild(listItemWrap);
+  }
 
   }
   //为啥放这里，因为没有渲染啊，直接放上去报错,获取DOM元素
@@ -548,9 +567,9 @@ function initlistItem() {
       }
       //从 addresses 数组中过滤掉被删除的项
       addresses = addresses.filter(item => item.id !== addressId);
-      // 如果删除后没有地址了，清空 localStorage
+      // 如果删除后没有地址了，清空 userAddresses
       if (addresses.length === 0) {
-        localStorage.removeItem(STORAGE_KEY);
+        saveUserAddresses([]);
       } else {
         // 重新排序 
         addresses.sort((a, b) => b.id - a.id); // 确保倒序
@@ -561,15 +580,11 @@ function initlistItem() {
           address: item.address
         }));
         // 保存整个更新后的数组
-        saveAddress(addresses); 
+        saveUserAddresses(addresses); 
         initlistItem();
       }
     });
   });
-  //存储到本地存储里
-  function saveAddress(data) {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
-  }
   //点击置顶效果
   function list() {
   }
@@ -577,6 +592,7 @@ function initlistItem() {
 }
 //初始化地址列表
 document.addEventListener('DOMContentLoaded', function () {
+  addresses = getUserAddresses();
   if (addresses.length == 0) {
     modalOverlay.classList.add('active');
     document.body.style.overflow = 'hidden'; // 防止背景滚动
@@ -705,7 +721,7 @@ function initModal(title, Id) {
     if (addresses.length == 0) {
       //提示地址保存成功；
       element('../images/massages/success.png', '地址保存成功', '#39bf3c');
-      saveAddress(Insert(ID, currentUser, address));//第一次提交
+      saveUserAddresses(Insert(ID, currentUser, address));//第一次提交
     }
     // 这里可以添加表单提交逻辑
     // alert('地址保存成功！');
@@ -718,24 +734,19 @@ function initModal(title, Id) {
           username: addresses[i].username,
           address: addresses[i].address
         }
-        saveAddress(addresses[i]);
+        saveUserAddresses(addresses);
       }
       //提示地址保存成功；
       element('../images/massages/success.png', '地址保存成功', '#39bf3c');
-      saveAddress(Insert(ID, currentUser, address));
+      saveUserAddresses(Insert(ID, currentUser, address));
     } else {//更新
-      saveAddress(Updata(Id, address));
+      saveUserAddresses(Updata(Id, address));
     }
     initlistItem();
     closeModal();
     addressForm.reset();
   });
 
-  //存储到本地存储里
-  function saveAddress(data) {
-
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
-  }
   //插入数据
   function Insert(id, username, address) {
     const userData =
