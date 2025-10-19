@@ -44,29 +44,7 @@ for (let i = 0; i < bnt.length; i++) {
       }, 3000);
   }
 }
-/*=================实现一键清除=========================== */
-//获取指定css属性
-const names = document.querySelector('.uname');
-const pawd = document.querySelector('.upawd');
-const clear = document.querySelector('.clears');
-const submitbtn = document.querySelector('.login-btn');
-//定义一键清除函数
-const clearfunc = function () {
-  clear.style.display = 'block';
-  clear.onclick = function () {
-    names.value = '';
-    clear.style.display = 'none';
-  }
-}
-//输入时获取输入的对象
-names.oninput = function () {
-  if (names.value.length == 0) {
-    clear.style.display = 'none';
-  }
-  else {
-    clearfunc();
-  }
-}
+
 /*=================实现一键清除=========================== */
 //获取指定css属性
 const names = document.querySelector('.uname');
@@ -356,6 +334,7 @@ function close() {
   document.body.style.overflow = 'auto';//防止背景滚动
 
 }
+
 
 
 
