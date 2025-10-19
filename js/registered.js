@@ -158,7 +158,8 @@ register.onclick = function(){
       email: email.value,
       password: passwordInput.value,
       cart: [], // 空购物车
-      image:''
+      image:'',
+      userAddresses:[]
     };
     // 存储用户数据
     localStorage.setItem(email.value, JSON.stringify(userData));
@@ -242,6 +243,7 @@ function element(imgSrc, textContent, textColor) {
   // 如果你需要外部能控制关闭，可以返回 clearTimers
   return clearTimers;
 }
+
 
 
 
