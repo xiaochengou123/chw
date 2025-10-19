@@ -67,10 +67,40 @@ names.oninput = function () {
     clearfunc();
   }
 }
+/*=================实现一键清除=========================== */
+//获取指定css属性
+const names = document.querySelector('.uname');
+const pawd = document.querySelector('.upawd');
+const clear = document.querySelector('.clears');
+const submitbtn = document.querySelector('.login-btn');
+//定义一键清除函数
+const clearfunc = function () {
+  clear.style.display = 'block';
+  clear.onclick = function () {
+    names.value = '';
+    clear.style.display = 'none';
+    input();
+  }
+}
+//输入时获取输入的对象
+names.oninput = function () {
+  if (names.value.length == 0) {
+    clear.style.display = 'none';
+  }
+  else {
+    clearfunc();
+  }
+}
 //==========================输入框的验证===============================
 const loginLink = document.querySelector('.loginLink');
+names.oninput=function(){
+  input();
+}
 pawd.oninput = function () {
-  if (names.value.length > 0 && pawd.value.length > 0) {
+input();
+}
+function input() {
+  if (names.value.trim().length > 0 && pawd.value.trim().length > 0) {
 
     submitbtn.className = 'login-btn-active login-submit-btn';
     //用户登入验证
@@ -85,6 +115,7 @@ pawd.oninput = function () {
     });
   }
 }
+
 //===========================登入拦截器==============================
 const log = function () {
   //先判断用户(邮箱)是否存在
@@ -323,4 +354,5 @@ function close() {
   captcha_footer.classList.remove('active');
   captcha_drop.classList.remove('active');
   document.body.style.overflow = 'auto';//防止背景滚动
+
 }
